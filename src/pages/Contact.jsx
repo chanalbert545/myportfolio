@@ -1,91 +1,87 @@
-import { useState } from 'react'
+import React, { useState } from 'react';
+import Swal from 'sweetalert2';
 
-function Contact() {
-  const [form, setForm] = useState({ name: '', email: '', message: '' })
-  const [errors, setErrors] = useState({})
+const Contact = () => {
+  const [result, setResult] = useState("");
 
-  function validate() {
-    const e = {}
-    if (!form.name.trim()) e.name = 'Name is required'
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = 'Valid email required'
-    if (form.message.trim().length < 10) e.message = 'Message must be at least 10 characters'
-    setErrors(e)
-    return Object.keys(e).length === 0
-  }
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
 
-  const [status, setStatus] = useState('idle') // idle | loading | success | error
-  const [serverError, setServerError] = useState('')
+    const formData = new FormData(event.target);
+    formData.append("access_key", "abda80e5-3eb1-4db7-b462-175b8eed3d4a");
 
-  async function handleSubmit(ev) {
-    ev.preventDefault()
-    if (!validate()) return
-    setStatus('loading')
-    setServerError('')
     try {
-  const apiBase = import.meta.env.VITE_API_URL || '';
-  const res = await fetch(`${apiBase}/api/contact`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
-      })
-      if (!res.ok) throw new Error('Request failed')
-      setStatus('success')
-      setForm({ name: '', email: '', message: '' })
-    } catch (e) {
-      setStatus('error')
-      setServerError('Failed to send. Please try again later.')
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        Swal.fire({
+          title: "Success!",
+          text: "Message sent successfully!",
+          icon: "success",
+        });
+        event.target.reset(); // Reset form after successful submission
+        setResult("");
+      } else {
+        console.error("Error", data);
+        setResult(data.message || "Something went wrong!");
+      }
+    } catch (error) {
+      console.error("Error", error);
+      setResult("An error occurred while sending the message.");
     }
-  }
+  };
 
   return (
-    <section className="section">
-      <div className="container">
-        <h2>Contact</h2>
-        <form className="form" onSubmit={handleSubmit} noValidate>
-          <label>
-            <span>Name</span>
-            <input
-              type="text"
-              value={form.name}
-              onChange={(e) => setForm({ ...form, name: e.target.value })}
-              aria-invalid={!!errors.name}
-            />
-            {errors.name && <em className="error">{errors.name}</em>}
-          </label>
+    <section className="contact">
+      <form className="contact-form" onSubmit={onSubmit}>
+        <h2>Contact Form</h2>
 
-          <label>
-            <span>Email</span>
-            <input
-              type="email"
-              value={form.email}
-              onChange={(e) => setForm({ ...form, email: e.target.value })}
-              aria-invalid={!!errors.email}
-            />
-            {errors.email && <em className="error">{errors.email}</em>}
-          </label>
+        <div className="input-Box">
+          <label>Full Name</label>
+          <input
+            type="text"
+            className="field"
+            placeholder="Enter your name"
+            name="name"
+            required
+          />
+        </div>
 
-          <label>
-            <span>Message</span>
-            <textarea
-              rows="5"
-              value={form.message}
-              onChange={(e) => setForm({ ...form, message: e.target.value })}
-              aria-invalid={!!errors.message}
-            />
-            {errors.message && <em className="error">{errors.message}</em>}
-          </label>
+        <div className="input-Box">
+          <label>Email Address</label>
+          <input
+            type="email"
+            className="field"
+            placeholder="Enter your email"
+            name="email"
+            required
+          />
+        </div>
 
-          <button type="submit" className="button primary" disabled={status === 'loading'}>
-            {status === 'loading' ? 'Sending…' : 'Send'}
-          </button>
-          {status === 'success' && <p>Thank you! I will reply shortly.</p>}
-          {status === 'error' && <p className="error">{serverError}</p>}
-        </form>
-      </div>
+        <div className="input-Box">
+          <label>Your Message</label>
+          <textarea
+            name="message"
+            className="field mess"
+            placeholder="Enter your message"
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit" className="submit-btn">Send Message</button>
+
+        {result && <p className="status">{result}</p>}
+      </form>
     </section>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;
 
 

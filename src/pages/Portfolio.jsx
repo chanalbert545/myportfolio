@@ -22,7 +22,7 @@ import img20 from '../assets/pic6.jpg'
 
 const WORKS = [
   { id: 1, title: 'Partys & Concerts', category: 'graphics', thumb: img4 },
-  { id: 2, title: 'Logo Animation', category: 'motion', thumb: img5, videoMp4: '/logo.mp4' },
+  { id: 2, title: 'Logo Animation', category: 'motion', thumb: img5, videoMp4: '/Comp1.mp4' },
   { id: 3, title: 'MamaCare Nursery & Daycare', category: 'web', thumb: img6, href: 'https://mamacarenursery.kesug.com/' },
   { id: 4, title: 'Graduation shots', category: 'photo', thumb: img1 },
   { id: 5, title: 'Social media reels', category: 'motion', thumb: img2, videoMp4: '/Comp2.mp4' },
@@ -35,7 +35,7 @@ const WORKS = [
   { id: 12, title: 'Packaging ', category: 'graphics', thumb: img12 },
   { id: 13, title: 'Tours', category: 'graphics', thumb: img13 },
   { id: 14, title: 'workshops & events', category: 'graphics', thumb: img14 },
-  { id: 15, title: 'Our Portfolio Website', category: 'web', thumb: img15, href: 'https://designlab.netlify.app' },
+  { id: 15, title: 'Our Portfolio Website', category: 'web', thumb: img15, href: 'https://chanalbert545.github.io/myportfolio/' },
   { id: 16, title: 'Model shots', category: 'photo', thumb: img16 },
   { id: 17, title: 'Awareness', category: 'graphics', thumb: img17 },
   { id: 18, title: 'personal shots', category: 'photo', thumb: img18 },
