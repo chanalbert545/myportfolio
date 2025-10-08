@@ -20,18 +20,20 @@ import img18 from '../assets/pic13.jpg'
 import img19 from '../assets/pic15.jpg'
 import img20 from '../assets/pic6.jpg'
 
+const BASE_PATH = '/myportfolio';
+
 const WORKS = [
   { id: 1, title: 'Partys & Concerts', category: 'graphics', thumb: img4 },
-  { id: 2, title: 'Logo Animation', category: 'motion', thumb: img5, videoMp4: '/Comp1.mp4' },
+  { id: 2, title: 'Logo Animation', category: 'motion', thumb: img5, videoMp4: `${BASE_PATH}/Comp1.mp4` },
   { id: 3, title: 'MamaCare Nursery & Daycare', category: 'web', thumb: img6, href: 'https://mamacarenursery.kesug.com/' },
   { id: 4, title: 'Graduation shots', category: 'photo', thumb: img1 },
-  { id: 5, title: 'Social media reels', category: 'motion', thumb: img2, videoMp4: '/Comp2.mp4' },
+  { id: 5, title: 'Social media reels', category: 'motion', thumb: img2, videoMp4: `${BASE_PATH}/Comp2.mp4` },
   { id: 6, title: 'Campaign poster', category: 'graphics', thumb: img3 },
   { id: 7, title: 'Call for Action flyer', category: 'graphics', thumb: img7 },
   { id: 8, title: 'Logo design', category: 'graphics', thumb: img8 },
   { id: 9, title: 'Business flyers', category: 'graphics', thumb: img9 },
   { id: 10, title: 'Portrait Shot', category: 'photo', thumb: img10 },
-  { id: 11, title: 'Motion ads', category: 'motion', thumb: img4, videoMp4: '/hhh.mp4' },
+  { id: 11, title: 'Motion ads', category: 'motion', thumb: img4, videoMp4: `${BASE_PATH}/hhh.mp4` },
   { id: 12, title: 'Packaging ', category: 'graphics', thumb: img12 },
   { id: 13, title: 'Tours', category: 'graphics', thumb: img13 },
   { id: 14, title: 'workshops & events', category: 'graphics', thumb: img14 },
