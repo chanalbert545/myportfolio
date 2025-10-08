@@ -103,7 +103,7 @@ function Home() {
             Latest Projects
           </motion.h2>
 
-          {/* Projects */}
+          
           <div className="gallery grid three">
             {[ 
               { img: heroImg4, title: "Brand Refresh", tag: "identity" },
