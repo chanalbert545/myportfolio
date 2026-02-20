@@ -12,7 +12,7 @@ function Navbar() {
       <nav className="navbar">
         <div className="nav-inner">
           <div className="brand">
-            <img src="mylogo.png" alt="Logo" className="brand-logo" />
+            <img src="chan logo.png" alt="Logo" className="brand-logo" width="40px" height="40px" />
           </div>
 
           

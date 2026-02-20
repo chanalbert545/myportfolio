@@ -1,17 +1,17 @@
-import heroImg20 from '../assets/aboutme.png'
+import heroImg20 from '../assets/aboutme.webp'
 
 function About() {
   return (
     <section className="section">
       <div className="container">
         <div className="image">
-          <img src={heroImg20} alt="About Me" />
+          <img src={heroImg20} alt="About Me" loading="lazy"/>
           </div>
         
 
         <h2>About Me</h2>
         <p>
-          I’m Albert, a graphics and motion designer, web designer, and photographer.
+          I’m Albert, a graphics and motion, web designer, and photographer.
           Over the past years, I’ve helped startups and brands tell better stories through
           bold visuals, smooth motion, and clean, responsive websites.
         </p>

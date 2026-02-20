@@ -5,8 +5,8 @@ import heroImg1 from '../assets/pic1.jpg'
 import heroImg2 from '../assets/pic2.jpeg'
 import heroImg3 from '../assets/pic.jpeg'
 import heroImg4 from '../assets/pic4.jpg'
-import heroImg5 from '../assets/pic5.png'
-import heroImg6 from '../assets/pic6.png'
+import heroImg5 from '../assets/pic5.webp'
+import heroImg6 from '../assets/pic6.webp'
 
 function Home() {
   return (
@@ -120,7 +120,7 @@ function Home() {
                 whileHover={{ scale: 1.05, y: -6, boxShadow: "0 8px 20px rgba(0,0,0,0.2)" }}
               >
                 <Link to="/portfolio" aria-label={`View ${project.title}`}>
-                  <img src={project.img} alt={project.title} />
+                  <img src={project.img} alt={project.title} loading="lazy"/>
                   <h4>{project.title}</h4>
                   <div className="tag">{project.tag}</div>
                 </Link>

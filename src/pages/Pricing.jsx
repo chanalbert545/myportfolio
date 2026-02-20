@@ -40,7 +40,7 @@ function Pricing() {
         <div className="grid three pricing">
           <div className="card">
             <h3>Graphics</h3>
-            <p className="price">UGX 20,000-40,000</p>
+            <p className="price">UGX 30,000-60,000</p>
             <ul>
               <li>Logo & brand basics, posters</li>
               <li>Business cards,brochures</li>
@@ -48,7 +48,7 @@ function Pricing() {
           </div>
           <div className="card featured">
             <h3>Motion</h3>
-            <p className="price">UGX 30,000-100,000</p>
+            <p className="price">UGX 60,000-100,000</p>
             <ul>
               <li>Logo Animation</li>
               <li>Trailers, </li>
@@ -57,7 +57,7 @@ function Pricing() {
           </div>
           <div className="card">
             <h3>Custom</h3>
-            <p className="price">UGX 300,000-600,000</p>
+            <p className="price">UGX 300,000-1,000,000</p>
             <ul>
               <li>Website Design & Development</li>
               <li>Website Maintenance</li>

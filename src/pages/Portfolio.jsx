@@ -3,13 +3,13 @@ import img1 from '../assets/pic9.jpg'
 import img2 from '../assets/pic2.jpeg'
 import img3 from '../assets/snap8.jpg'
 import img4 from '../assets/pic4.jpg'
-import img5 from '../assets/pic5.png'
-import img6 from '../assets/pic6.png'
+import img5 from '../assets/pic5.webp'
+import img6 from '../assets/pic6.webp'
 import img7 from '../assets/snap1.jpg'
-import img8 from '../assets/logos.png'
+import img8 from '../assets/logos.webp'
 import img9 from '../assets/PURE.jpg'
 import img10 from '../assets/pic10.jpg'
-import img11 from '../assets/pic5.png'
+import img11 from '../assets/pic5.webp'
 import img12 from '../assets/mdd.jpg'
 import img13 from '../assets/snap3.jpg'
 import img14 from '../assets/snap9.jpg'
@@ -106,7 +106,7 @@ function Portfolio() {
           {filtered.map(item => (
             <li key={item.id} className="work-card">
               <button className="work-button" onClick={() => onItemClick(item)}>
-                <img src={item.thumb} alt={item.title} />
+                <img src={item.thumb} alt={item.title} loading="lazy"/>
                 <h4>{item.title}</h4>
                 <p className="tag">{item.category}</p>
               </button>
@@ -141,9 +141,9 @@ function Portfolio() {
                   Your browser does not support the video tag.
                 </video>
               ) : selected.type === 'video' && videoError ? (
-                <img className="modal-image" src={selected.item.thumb} alt={selected.item.title} />
+                <img className="modal-image" src={selected.item.thumb} alt={selected.item.title} loading="lazy" />
               ) : (
-                <img className="modal-image" src={selected.item.thumb} alt={selected.item.title} />
+                <img className="modal-image" src={selected.item.thumb} alt={selected.item.title} loading="lazy"/>
               )}
             </div>
           </div>
