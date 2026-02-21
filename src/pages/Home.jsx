@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import BackgroundSlider from '../components/BackgroundSlider'
 import heroImg1 from '../assets/pic1.jpg'
-import heroImg2 from '../assets/pic2.jpeg'
-import heroImg3 from '../assets/pic.jpeg'
+import heroImg2 from '../assets/pic4.jpg'
+import heroImg3 from '../assets/vv.webp'
 import heroImg4 from '../assets/pic4.jpg'
 import heroImg5 from '../assets/pic5.webp'
 import heroImg6 from '../assets/pic6.webp'
@@ -13,7 +13,7 @@ function Home() {
     <>
       <section className="section hero hero-with-bg">
         <BackgroundSlider
-          images={[heroImg1, heroImg2, heroImg3]}
+          images={[heroImg3, heroImg2, heroImg1]}
           durationMs={5000}
           fadeMs={1000}
         />
@@ -24,7 +24,7 @@ function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            Design that moves people
+            Creativity that drives results
           </motion.h1>
 
           {/* Hero Text */}

@@ -98,7 +98,7 @@ a:hover { color: var(--brand); }
   opacity: 0; transform: scale(1.06);
   transition-property: opacity, transform; 
   transition-timing-function: ease;
-  filter: brightness(.75) contrast(1.08) saturate(.95);
+  filter: brightness(.55) contrast(1.08) saturate(.95);
 }
 .bg-slide.is-active { opacity: .9; transform: scale(1); }
 .bg-overlay {
@@ -120,9 +120,10 @@ a:hover { color: var(--brand); }
 /* Pricing theme overrides */
 .pricing .card { background: var(--brand); color: #111; border-color: transparent; }
 .pricing .card h3 { background: #06090f; color: var(--brand); padding: 8px 12px; border-radius: 10px; display: inline-block; }
+.pricing .card p {margin: 12px 0 0; padding-left: 18px; text-align: left; margin: 0;  }
 .pricing .card .price { color: #111; }
-.pricing .card ul { margin: 12px 0 0; padding-left: 18px; }
-.pricing .card li { color: #0d131a; }
+.pricing .card ul { margin: 12px 0 0; padding-left: 18px; text-align: left; margin: 0; }
+.pricing .card li { color: #0d131a;   text-align: left; margin-bottom: 6px; }
 .pricing .featured { outline: 2px solid #14213d; }
 .note { color: var(--muted); margin-top: 12px; }
 
