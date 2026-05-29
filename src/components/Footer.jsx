@@ -12,8 +12,8 @@ const Footer = () => {
           <div className="contact">
             <span>© {new Date().getFullYear()} chanbranding</span>
             <div className="contact-links">
-              <a href="mailto:hello@chanbranding">hello@chanbranding</a> |{" "}
-              <a href="tel:+256700000000">+256 750778755</a>
+              <a href="mailto:chanalbert545@gmail.com">chanalbert545@gmail.com</a> |{" "}
+              <a href="tel:+256700000000">+256 763438574</a>
             </div>
           </div>
         </div>

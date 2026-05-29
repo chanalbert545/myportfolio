@@ -1,10 +1,12 @@
+import '../pricing.css';
+
 function Pricing() {
   return (
-    <section className="section">
+    <section className="pricing-section">
       <div className="container">
-        <h2>Packages</h2>
-        <div className="grid three pricing">
-          <div className="card">
+        <h2 className="pricing-title">Packages</h2>
+        <div className="pricing-grid">
+          <div className="pricing-card">
             <h3>Graphics Only</h3>
             <p className="price">Starter</p>
             <ul>
@@ -13,7 +15,7 @@ function Pricing() {
               <li>print outs(pricing per printout copies)</li>
             </ul>
           </div>
-          <div className="card featured">
+          <div className="pricing-card featured">
             <h3>Graphics & Motion ads</h3>
             <p className="price">Pro</p>
             <ul>
@@ -22,7 +24,7 @@ function Pricing() {
               <li>15-60 sec motion ads</li>
             </ul>
           </div>
-          <div className="card">
+          <div className="pricing-card">
             <h3>Custom</h3>
             <p className="price">Advanced</p>
             <ul>
@@ -31,31 +33,30 @@ function Pricing() {
               <li>Website Design & Maintenance</li>
             </ul>
           </div>
-          
         </div>
       </div>
 
       <div className="container2">
-        <h2>Pricing per service</h2>
-        <div className="grid three pricing">
-          <div className="card">
+        <h2 className="pricing-title">Pricing per service</h2>
+        <div className="pricing-grid">
+          <div className="pricing-card">
             <h3>Graphics</h3>
-            <p className="price">UGX 30,000-60,000</p>
+            <p className="price">UGX 25,000-300,000</p>
             <ul>
               <li>Logo & brand basics, posters</li>
               <li>Business cards,brochures</li>
             </ul>
           </div>
-          <div className="card featured">
+          <div className="pricing-card featured">
             <h3>Motion</h3>
-            <p className="price">UGX 60,000-100,000</p>
+            <p className="price">UGX 80,000-500,000</p>
             <ul>
               <li>Logo Animation</li>
               <li>Trailers, </li>
               <li>Social media reels</li>
             </ul>
           </div>
-          <div className="card">
+          <div className="pricing-card">
             <h3>Custom</h3>
             <p className="price">UGX 300,000-1,000,000</p>
             <ul>
@@ -64,12 +65,11 @@ function Pricing() {
               <li>Website Hosting & Domain Name</li>
             </ul>
           </div>
-          
         </div>
         <p className="note">The prices vary per service, duration of the motion ads, content of the graphics and abilities & expectations of the website. Though all the prices are negotiable once agreements are made between our agency and the clients.</p>
       </div>
     </section>
-  )
+  );
 }
 
 export default Pricing

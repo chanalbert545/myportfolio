@@ -1,14 +1,14 @@
-import heroImg20 from '../assets/aboutme.webp'
+
+import heroImg20 from '../assets/aboutme.webp';
+import '../about.css';
 
 function About() {
   return (
-    <section className="section">
+    <section className="section about-section" style={{ minHeight: '100vh', background: 'radial-gradient(1200px 800px at 80% -10%, #1c2230 0%, var(--bg) 60%)' }}>
       <div className="container">
-        <div className="image">
-          <img src={heroImg20} alt="About Me" loading="lazy"/>
-          </div>
-        
-
+        <div className="about-hero">
+          <img src={heroImg20} alt="About Me" loading="lazy" />
+        </div>
         <h2>About Me</h2>
         <p>
           I’m Albert, a graphics and motion, web designer, and photographer.
@@ -22,7 +22,7 @@ function About() {
         </p>
       </div>
     </section>
-  )
+  );
 }
 
 export default About

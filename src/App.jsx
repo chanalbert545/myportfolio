@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
-import './App.css'
+import './index.css'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import WhatsAppFloat from './components/WhatsAppFloat'
@@ -8,7 +8,6 @@ import About from './pages/About'
 import Services from './pages/Services'
 import Pricing from './pages/Pricing'
 import Testimonials from './pages/Testimonials'
-import Contact from './pages/Contact'
 import Portfolio from './pages/Portfolio'
 
 
@@ -24,7 +23,7 @@ function App() {
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/contact" element={<Contact />} />
+
         </Routes>
       </main>
       <Footer />

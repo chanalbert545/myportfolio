@@ -1,32 +1,33 @@
 import { useEffect, useMemo, useState } from 'react'
-import img1 from '../assets/pic9.jpg'
+import img1 from '../assets/pic9.webp'
 import img2 from '../assets/vv.webp'
 import img3 from '../assets/camp.webp'
-import img4 from '../assets/pic4.jpg'
+import img4 from '../assets/pic4.webp'
+import img25 from '../assets/wear your story.webp'
 import img5 from '../assets/pic5.webp'
 import img6 from '../assets/pic6.webp'
-import img7 from '../assets/bakawa.jpg'
-import img8 from '../assets/loggos.webp'
-import img9 from '../assets/PURE.jpg'
-import img10 from '../assets/pic10.jpg'
+import img7 from '../assets/bakawa.webp'
+import img8 from '../assets/logos.webp'
+import img9 from '../assets/spes good friday.webp'
+import img10 from '../assets/pic10.webp'
 import img11 from '../assets/pic5.webp'
 import img12 from '../assets/m&d.webp'
-import img13 from '../assets/aug.jpeg'
-import img14 from '../assets/pic.webp'
+import img13 from '../assets/mango labour day.webp'
+import img14 from '../assets/roadtrip.webp'
 import img15 from '../assets/pic.webp'
-import img16 from '../assets/pic11.jpg'
+import img16 from '../assets/pic11.webp'
 import img17 from '../assets/nba.webp'
-import img18 from '../assets/pic7.jpg'
-import img19 from '../assets/pic15.jpg'
-import img20 from '../assets/pic6.jpg'
-import img21 from '../assets/feb.webp'
-import img22 from '../assets/andy.webp'
-import img23 from '../assets/ghana 3.jpg'
+import img18 from '../assets/pic7.webp'
+import img19 from '../assets/pic15.webp'
+import img20 from '../assets/pic6.webp'
+import img21 from '../assets/sec newmonth.webp'
+import img22 from '../assets/safet toppee 2.webp'
+import img23 from '../assets/KILIFAIR.webp'
 import img24 from '../assets/chanlogo.png'
 
 
 const WORKS = [
-  { id: 1, title: 'Partys & Concerts', category: 'graphics', thumb: img4 },
+  { id: 1, title: 'Partys & Concerts', category: 'graphics', thumb: img25 },
   { id: 2, title: 'Logo Animation', category: 'motion', thumb: img5, videoMp4: `/Comp1.mp4` },
   { id: 3, title: 'MamaCare Nursery & Daycare', category: 'web', thumb: img6, href: 'https://mamacarenursery.com/' },
   { id: 4, title: 'Graduation shots', category: 'photo', thumb: img1 },
@@ -34,12 +35,12 @@ const WORKS = [
   { id: 6, title: 'Campaign poster', category: 'graphics', thumb: img3 },
   { id: 7, title: 'Business social media designs', category: 'graphics', thumb: img7 },
   { id: 8, title: 'Logo design', category: 'graphics', thumb: img8 },
-  { id: 9, title: 'Business flyers', category: 'graphics', thumb: img9 },
+  { id: 9, title: 'Public Holidays', category: 'graphics', thumb: img9 },
   { id: 10, title: 'Portrait Shot', category: 'photo', thumb: img10 },
   { id: 11, title: 'Motion ads', category: 'motion', thumb: img4, videoMp4: `/hhh.mp4` },
   { id: 12, title: 'Packaging ', category: 'graphics', thumb: img12 },
   { id: 13, title: 'photo Manipulated posters', category: 'graphics', thumb: img13 },
-  { id: 14, title: 'Product posters', category: 'graphics', thumb: img14 },
+  { id: 14, title: 'Trips and Tours', category: 'graphics', thumb: img14 },
   { id: 15, title: 'Our Portfolio Website', category: 'web', thumb: img24, href: 'https://chanbranding.netlify.app/' },
   { id: 16, title: 'Model shots', category: 'photo', thumb: img16 },
   { id: 17, title: 'Sports posters', category: 'graphics', thumb: img17 },

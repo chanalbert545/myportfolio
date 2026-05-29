@@ -21,7 +21,12 @@ function BackgroundSlider({ images = [], durationMs = 4500, fadeMs = 900 }) {
           key={idx}
           className={`bg-slide ${idx === activeIndex ? 'is-active' : ''}`}
           style={{ backgroundImage: `url(${src})`, transitionDuration: `${fadeMs}ms` }}
-        />
+        >
+          {/* Preload for LCP: use <img> offscreen for browser optimization */}
+          {idx === 0 && (
+            <img src={src} style={{ display: 'none' }} alt="" loading="eager" decoding="async" />
+          )}
+        </div>
       ))}
       <div className="bg-overlay" />
     </div>
