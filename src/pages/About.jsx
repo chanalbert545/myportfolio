@@ -7,7 +7,7 @@ function About() {
     <section className="section about-section" style={{ minHeight: '100vh', background: 'radial-gradient(1200px 800px at 80% -10%, #1c2230 0%, var(--bg) 60%)' }}>
       <div className="container">
         <div className="about-hero">
-          <img src={heroImg20} alt="About Me" loading="lazy" />
+          <img src={heroImg20} alt="About Me" />
         </div>
         <h2>About Me</h2>
         <p>

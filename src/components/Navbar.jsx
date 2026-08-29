@@ -12,7 +12,7 @@ function Navbar() {
         <div className="nav-inner">
           {/* Logo on extreme left - links to home */}
           <Link to="/" className="logo-link" onClick={() => setMenuOpen(false)}>
-            <img src="chanlogo.png" alt="Logo" className="brand-logo" />
+            <img src="chanlogo.png" alt="Logo" className="brand-logo" loading="lazy" />
           </Link>
 
           {/* Menu toggle for mobile */}

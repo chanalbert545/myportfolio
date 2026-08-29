@@ -1,5 +1,5 @@
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import BackgroundSlider from '../components/BackgroundSlider';
@@ -37,9 +37,22 @@ const clientLogos = [
 ]
 
 function Home() {
+  const [videoReady, setVideoReady] = useState(false)
+
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
   }, []);
+
+  useEffect(() => {
+    const startVideo = () => setVideoReady(true)
+    if ('requestIdleCallback' in window) {
+      const idleId = window.requestIdleCallback(startVideo, { timeout: 2500 })
+      return () => window.cancelIdleCallback(idleId)
+    }
+    const timeoutId = window.setTimeout(startVideo, 1500)
+    return () => window.clearTimeout(timeoutId)
+  }, [])
+
   return (
     <>
       <section className="section hero hero-with-bg">
@@ -90,7 +103,15 @@ function Home() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 1 }}
           >
-            <video src={heroVideo} autoPlay muted loop playsInline />
+            <video
+              src={videoReady ? heroVideo : undefined}
+              poster={heroImg3}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="none"
+            />
           </motion.div>
         </div>
       </section>
