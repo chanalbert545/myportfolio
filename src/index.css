@@ -183,7 +183,7 @@ img, video { max-width: 100%; height: auto; }
 
 .hero-image video {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
   border-radius: 16px;
   object-fit: cover;
