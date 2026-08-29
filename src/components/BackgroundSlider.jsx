@@ -20,7 +20,12 @@ function BackgroundSlider({ images = [], durationMs = 4500, fadeMs = 900 }) {
         <div
           key={idx}
           className={`bg-slide ${idx === activeIndex ? 'is-active' : ''}`}
-          style={{ backgroundImage: `url(${src})`, transitionDuration: `${fadeMs}ms` }}
+          style={{ 
+            backgroundImage: `url('${src}')`, 
+            transitionDuration: `${fadeMs}ms`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }}
         >
           {/* Preload for LCP: use <img> offscreen for browser optimization */}
           {idx === 0 && (

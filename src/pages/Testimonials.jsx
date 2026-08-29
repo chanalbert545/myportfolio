@@ -6,11 +6,11 @@ function Testimonials() {
     },
     {
       quote: 'Clean design, fast delivery, and a website that converts. Highly recommended.',
-      author: 'Nabakka Brenda. — Brenda & Family Decorations',
+      author: 'Robert. — Unica Prints',
     },
     {
       quote: 'Great eye for detail and storytelling. The product shots leveled us up.',
-      author: 'Solomon Murikwa. — Mon Group Gas Solutions',
+      author: 'Moses. — Kanji Safaris',
     },
   ]
 

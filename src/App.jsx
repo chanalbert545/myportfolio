@@ -9,6 +9,7 @@ import Services from './pages/Services'
 import Pricing from './pages/Pricing'
 import Testimonials from './pages/Testimonials'
 import Portfolio from './pages/Portfolio'
+import Contact from './pages/Contact'
 
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/portfolio" element={<Portfolio />} />
-
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
       <Footer />
