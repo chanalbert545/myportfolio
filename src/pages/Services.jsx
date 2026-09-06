@@ -1,7 +1,7 @@
 
 import '../service.css';
 
-import heroImg from '../assets/h (4).png';
+import heroImg from '../assets/h (4).webp';
 import logosImg from '../assets/spes.webp';
 import motionImg from '../assets/vv.webp';
 import webImg from '../assets/house.webp';

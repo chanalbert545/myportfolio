@@ -3,12 +3,12 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import BackgroundSlider from '../components/BackgroundSlider';
-import heroImg1 from '../assets/h (1).png';
-import heroImg2 from '../assets/h (3).png';
-import heroImg3 from '../assets/h (4).png';
-import heroImg4 from '../assets/oyo.png';
-import heroImg5 from '../assets/bk.png';
-import heroImg6 from '../assets/dr.png';
+import heroImg1 from '../assets/h (1).webp';
+import heroImg2 from '../assets/h (3).webp';
+import heroImg3 from '../assets/h (4).webp';
+import heroImg4 from '../assets/oyo.webp';
+import heroImg5 from '../assets/bk.webp';
+import heroImg6 from '../assets/dr.webp';
 import brandImg from '../assets/logo/uni.png';
 import webImg from '../assets/wear your story.webp';
 import motionImg from '../assets/pic1.webp';
@@ -153,7 +153,7 @@ function Home() {
 
           <p className="note">From brand identity to web experiences—tailored to your goals.</p>
 
-          {/* Service Cards */}
+          {/* Featured service boxes */}
           <ul className="grid three">
             {[
               { title: "Brand & Visual Identity", desc: "", img: brandImg },
@@ -161,20 +161,17 @@ function Home() {
               { title: "Motion & Content", desc: "", note: "", img: motionImg }
             ].map((service, i) => (
               <motion.li 
-                className="card service-card"
+                className="home-service-card"
                 key={i}
-                style={{ backgroundImage: `url(${service.img})` }}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.2, duration: 0.8 }}
-                whileHover={{ scale: 1.05, boxShadow: "0 6px 20px rgba(0,0,0,0.15)" }}
+                whileHover={{ y: -6 }}
               >
-                <div className="service-overlay"></div>
-                <div className="service-content">
+                <img className="home-service-image" src={service.img} alt="" />
+                <div className="home-service-caption">
                   <h3>{service.title}</h3>
-                  <p>{service.desc}</p>
-                  <div className="note">{service.note}</div>
                 </div>
               </motion.li>
             ))}

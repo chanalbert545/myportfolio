@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import '../pricing.css';
-import heroImg from '../assets/h (3).png';
+import heroImg from '../assets/h (3).webp';
 
 const pricingData = {
   logo: {

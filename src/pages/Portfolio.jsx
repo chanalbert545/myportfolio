@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 
-import heroImg from '../assets/ZDH.png'
+import heroImg from '../assets/ZDH.webp'
 import img2 from '../assets/vv.webp'
 import img3 from '../assets/camp.webp'
 import img4 from '../assets/pic4.webp'

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import '../contact.css';
-import heroImg from '../assets/h (1).png';
+import heroImg from '../assets/h (1).webp';
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -23,10 +23,8 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you can add form submission logic (e.g., send to email service)
     console.log('Form submitted:', formData);
     setSubmitted(true);
-    // Reset form after 2 seconds
     setTimeout(() => {
       setFormData({
         name: '',
